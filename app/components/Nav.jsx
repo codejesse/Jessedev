@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { AcmeLogo } from './AcmeLogo';
+import { Spiral as Hamburger } from 'hamburger-react'
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const Nav = () => {
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-8" justify="center">
+            <NavbarContent className="hidden sm:hidden gap-8" justify="center">
                 <NavbarItem>
                     <Link className='text-normal' color="foreground" href="#">
                         Work
@@ -47,10 +48,11 @@ const Nav = () => {
                     </Button>
                 </NavbarItem>
             </NavbarContent>
-            <NavbarMenuToggle
+            {/* <NavbarMenuToggle
                 aria-label={isMenuOpen ? "🍔" : "Open 🍔"}
                 className="sm:hidden flex flex-row-reverse w-fit"
-            />
+            /> */}
+            <Hamburger toggled={isMenuOpen} toggle={setIsMenuOpen} />
             <NavbarMenu>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>

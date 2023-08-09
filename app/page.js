@@ -33,11 +33,11 @@ export default function Home() {
           <div className='flex flex-col gap-4 m-6 md:m-8 lg:m-14 pt-[30px] mt-[-20px] md:mt-[-20px] md:pt-[60px] lg:pt-[70px]'>
             <h1 className='text-[55px] md:text-[80px] lg:text-[90px] leading-[70px] lg:leading-[90px]'><span className=''>Creative ✨</span> Front End Developer</h1>
             <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i'm Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
-            <div className='flex flex-row gap-5 h-[60px] border border-slate-700 w-full md:w-96 lg:w-96 rounded-full'>
-              <div className='w-fit p-3 rounded-full mx-auto my-auto'><Image height={35} width={35} src="./Spotify_icon.svg" /></div>
-              <div className='w-fit p-3 rounded-full mx-auto my-auto'><Image height={35} width={35} src="./github.svg" /></div>
-              <div className='w-fit p-3 rounded-full mx-auto my-auto'>🧭</div>
-              <div className='w-fit p-3 rounded-full mx-auto my-auto'>🦍</div>  
+            <div className='flex flex-row gap-10 h-[60px] w-full md:w-96 lg:w-96 rounded-full'>
+              <div className='w-fit p-3 rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
+              <div className='w-fit p-3 rounded-full  my-auto'><Image height={35} width={35} src="./github.svg" /></div>
+              <div className='w-fit p-3 rounded-full my-auto'><Image height={35} width={35} src="./hashnode.svg" /></div>
+              <div className='w-fit p-3 rounded-full my-auto'><Image className='mt-[-2px]' height={40} width={40} src="./linkedin.svg" /></div>  
             </div>
           </div>
         </div>
