@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Card = () => {
     return (
         <div>
-            <div className='bg-[#f3f3f3] dark:bg-purple-200 rounded-3xl w-full md:h-[350px] lg:h-[450px] cursor-pointer overflow-hidden border border-[#d2d2d2]'>
-                <span className='bg-white hidden w-[50px] h-[50px] absolute rounded-full m-4 p-auto z-[999]'></span>
+            <div className='bg-[#f3f3f3] dark:none rounded-3xl w-full md:h-[350px] lg:h-[450px] cursor-pointer overflow-hidden border border-[#d2d2d2]'>
+                <span className='bg-white md:absolute hidden lg:absolute w-[50px] hover:w-[150px] hover:border-2 transition ease-in-out delay-150 h-[50px] rounded-full m-4 p-auto z-[999]'></span>
                 <div className='h-full flex items-center justify-center p-8 cursor-pointer hover:scale-110 transition ease-in-out delay-150'>
                     <Image
                         src="/test.png"

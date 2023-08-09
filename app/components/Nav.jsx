@@ -14,7 +14,7 @@ const Nav = () => {
 
     return (
         <Navbar
-            className='my-[10px] py-[20px] px-4 md:px-12 lg:px-12 mt-[-20px] w-full'
+            className='md:my-[-8px] lg:my-[-35px] py-[20px] px-4 md:px-12 ml-[-7px] md:ml-[-10px] lg:ml-[-30px] lg:px-14 mt-[-20px] w-full fixed bg-[#d8dcdc]'
             isBlurred
             onMenuOpenChange={setIsMenuOpen}
         >
@@ -47,10 +47,10 @@ const Nav = () => {
                     </Button>
                 </NavbarItem>
             </NavbarContent>
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden flex flex-row-reverse w-fit"
-                />
+            <NavbarMenuToggle
+                aria-label={isMenuOpen ? "🍔" : "Open 🍔"}
+                className="sm:hidden flex flex-row-reverse w-fit"
+            />
             <NavbarMenu>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
