@@ -1,14 +1,70 @@
+"use client"
 import Image from 'next/image'
 import Nav from './components/Nav'
 import Card from './components/Card'
-import Prefooter from './components/Prefooter'
 import Footer from './components/Footer'
+import { useState, Fragment } from 'react'
+import { Transition, Dialog } from '@headlessui/react'
 
 export default function Home() {
+  let [isOpen, setIsOpen] = useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-2 lg:p-8">
       <div>
         <Nav />
+        <Transition appear show={isOpen} as={Fragment}>
+          <Dialog as="div" className="relative z-10" onClose={closeModal}>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
+
+            <div className="fixed inset-0 overflow-y-auto">
+              <div className="flex min-h-full items-center justify-center p-4 text-center">
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0 scale-95"
+                  enterTo="opacity-100 scale-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 scale-100"
+                  leaveTo="opacity-0 scale-95"
+                >
+                  <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-[15px] bg-white p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Title
+                                        as="h3"
+                                        className="text-3xl mt-[-10px] text-center font-display font-semibold leading-6 text-gray-800"
+                                    >
+                                        Jesse's fav playlist
+                                    </Dialog.Title>
+                    <div className="mt-2">
+                      <iframe className="rounded-[12px]" src="https://open.spotify.com/embed/playlist/3DIjw8eboATMgRN2RC6mz6?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+
+                    <div className="mt-4">
+                    </div>
+                  </Dialog.Panel>
+                </Transition.Child>
+              </div>
+            </div>
+          </Dialog>
+        </Transition>
         <div className='flex flex-col md:flex-col lg:flex-row-reverse'>
           <Image
             src="/jesse2.svg"
@@ -34,7 +90,7 @@ export default function Home() {
             <h1 className='text-[55px] md:text-[80px] lg:text-[90px] leading-[70px] lg:leading-[90px]'><span className=''>Creative ✨</span> Front End Developer</h1>
             <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i'm Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
             <div className='flex flex-row gap-10 h-[60px] w-full md:w-96 lg:w-96 rounded-full'>
-              <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
+              <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
               <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./github.svg" /></div>
               <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><Image height={35} width={35} src="./hashnode.svg" /></div>
               <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><Image className='mt-[-2px]' height={35} width={35} src="./linkedin.svg" /></div>
