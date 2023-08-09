@@ -48,11 +48,11 @@ export default function Home() {
                 >
                   <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-[15px] bg-white p-6 text-left align-middle shadow-xl transition-all">
                     <Dialog.Title
-                                        as="h3"
-                                        className="text-3xl mt-[-10px] text-center font-display font-semibold leading-6 text-gray-800"
-                                    >
-                                        Jesse's fav playlist
-                                    </Dialog.Title>
+                      as="h3"
+                      className="text-3xl mt-[-10px] text-center font-display font-semibold leading-6 text-gray-800"
+                    >
+                      Jesse's fav playlist
+                    </Dialog.Title>
                     <div className="mt-2">
                       <iframe className="rounded-[12px]" src="https://open.spotify.com/embed/playlist/3DIjw8eboATMgRN2RC6mz6?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </div>
@@ -91,9 +91,9 @@ export default function Home() {
             <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i'm Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
             <div className='flex flex-row gap-10 h-[60px] w-full md:w-96 lg:w-96 rounded-full'>
               <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./github.svg" /></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><Image height={35} width={35} src="./hashnode.svg" /></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><Image className='mt-[-2px]' height={35} width={35} src="./linkedin.svg" /></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><a target='__blank' href='https://github.com/codejesse'><Image height={35} width={35} src="./github.svg" /></a></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://jessewrites.hashnode.dev/'><Image height={35} width={35} src="./hashnode.svg" /></a></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://www.linkedin.com/in/jesse-beke/'><Image className='mt-[-2px]' height={35} width={35} src="./linkedin.svg" /></a></div>
             </div>
           </div>
         </div>
