@@ -15,7 +15,7 @@ const Nav = () => {
 
     return (
         <Navbar
-            className='md:my-[-8px] lg:my-[-35px] py-[20px] px-4 md:px-12 ml-[-7px] md:ml-[-10px] lg:ml-[-30px] lg:px-14 mt-[-20px] w-full fixed bg-[#d8dcdc]'
+            className='md:my-[-8px] lg:my-[-35px] py-[20px] px-4 md:px-12 ml-[-7px] md:ml-[-10px] lg:ml-[-30px] lg:px-14 mt-[-20px] w-full fixed bg-[#d8dcdc]/30 backdrop-blur-xl'
             isBlurred
             onMenuOpenChange={setIsMenuOpen}
         >
