@@ -8,6 +8,7 @@ import { Transition, Dialog } from '@headlessui/react'
 import Drawer from './components/Drawer'
 import Loader from './components/Loader'
 import { motion } from "framer-motion";
+import Message from './components/Message'
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false)
@@ -68,6 +69,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-2 lg:p-8">
       <div>
         <Nav />
+        <Message />
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-10" onClose={closeModal}>
             <Transition.Child
