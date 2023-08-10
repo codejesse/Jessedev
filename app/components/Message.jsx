@@ -48,7 +48,7 @@ export default function Message() {
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        <Image className="m-auto h-[170px] w-[180px]" width={170} height={170} src="/Jesse-2.jpeg" />
+                                        <Image className="m-auto h-[170px] w-[180px]" width={170} height={170} src="/Jesse-2.jpeg" alt='jesse' />
                                         Hello welcome to my portfolio site
                                     </Dialog.Title>
                                     <div className="mt-2">

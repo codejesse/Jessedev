@@ -100,7 +100,7 @@ export default function Home() {
                       as="h3"
                       className="flex flex-row gap-7 my-auto p-2 lg:mx-24 text-3xl mt-[-10px] text-center font-display font-semibold text-gray-800"
                     >
-                      <Image height={35} width={35} src="./Spotify_icon.svg" /> Jesse's fav playlist
+                      <Image height={35} width={35} src="./Spotify_icon.svg" /> Jesse&apos;s fav playlist
                     </Dialog.Title>
                     <div className="mt-2">
                       <iframe className="rounded-[12px]" src="https://open.spotify.com/embed/playlist/3DIjw8eboATMgRN2RC6mz6?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -153,7 +153,7 @@ export default function Home() {
               ))}
             </motion.div>
             {/* <h1 className='text-[55px] md:text-[80px] lg:text-[90px] leading-[70px] lg:leading-[90px]'><span className=''>Creative ✨</span> Front End Developer</h1> */}
-            <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i'm Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
+            <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i&apos;m Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
             <div className='flex flex-row gap-10 h-[60px] w-full md:w-96 lg:w-96 rounded-full'>
               <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
               <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><a target='__blank' href='https://github.com/codejesse'><Image height={35} width={35} src="./github.svg" /></a></div>
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
         <div className='m-4 md:m-8 lg:m-14'>
           <div className='flex pt-[40px]'>
-            <h1 className='font-medium md:text-[20px] lg:text-[30px]'>I strive to bring <span className='bg-[#2d2d2d] text-white p-3 px-4'>innovation ✨</span> and creativity 💡 to every project i work on. I work closely with clients to understand their needs and deliver outstanding solutions. I am dedicated to creating amazing products <span className='bg-[#2d2d2d] text-white p-3 px-4'>let's talk.</span></h1>
+            <h1 className='font-medium md:text-[20px] lg:text-[30px]'>I strive to bring <span className='bg-[#2d2d2d] text-white p-3 px-4'>innovation ✨</span> and creativity 💡 to every project i work on. I work closely with clients to understand their needs and deliver outstanding solutions. I am dedicated to creating amazing products <span className='bg-[#2d2d2d] text-white p-3 px-4'>let&apos;s talk.</span></h1>
           </div>
         </div>
         {/* <Prefooter /> */}
