@@ -23,7 +23,7 @@ export default function Home() {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.12, delayChildren: 0.30 * i },
     }),
   };
 
@@ -115,8 +115,8 @@ export default function Home() {
         <div className='flex flex-col md:flex-col lg:flex-row-reverse'>
           <Image
             src="/jesse2.svg"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             alt='Memoji of Jesse'
             className='w-[120px] md:w-[200px] lg:w-[500px] mt-[100px] md:mt-[100px] lg:mt-[-20px] flex md:flex lg:flex'
           />
@@ -138,7 +138,7 @@ export default function Home() {
               variants={container}
               initial="hidden"
               animate="visible"
-              className="text-[55px] md:text-[80px] lg:text-[83px] flex flex-wrap mt-4 gap-none lg:leading-[100px] md:w-8/12 lg:w-[100%] font-medium"
+              className="text-[30px] md:text-[50px] lg:text-[83px] flex flex-wrap mt-4 gap-none lg:leading-[100px] w-[100%] md:w-[80%] lg:w-[100%] font-medium"
             >
               {words.map((word, index) => (
                 <motion.div
