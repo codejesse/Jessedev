@@ -3,11 +3,14 @@ import Image from 'next/image'
 import Nav from './components/Nav'
 import Card from './components/Card'
 import Footer from './components/Footer'
-import { useState, Fragment } from 'react'
+import { useState, Fragment, useEffect } from 'react'
 import { Transition, Dialog } from '@headlessui/react'
+import Drawer from './components/Drawer'
+import Loader from './components/Loader'
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(true);
 
   function closeModal() {
     setIsOpen(false)
@@ -17,7 +20,14 @@ export default function Home() {
     setIsOpen(true)
   }
 
-  return (
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  return isLoading ? (
+    <Loader /> ) : (
     <main className="flex min-h-screen flex-col items-center justify-between p-2 lg:p-8">
       <div>
         <Nav />
@@ -49,9 +59,9 @@ export default function Home() {
                   <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-[15px] bg-white p-6 text-left align-middle shadow-xl transition-all">
                     <Dialog.Title
                       as="h3"
-                      className="text-3xl mt-[-10px] text-center font-display font-semibold leading-6 text-gray-800"
+                      className="flex flex-row gap-7 my-auto p-2 lg:mx-24 text-3xl mt-[-10px] text-center font-display font-semibold text-gray-800"
                     >
-                      Jesse's fav playlist
+                      <Image height={35} width={35} src="./Spotify_icon.svg" /> Jesse's fav playlist
                     </Dialog.Title>
                     <div className="mt-2">
                       <iframe className="rounded-[12px]" src="https://open.spotify.com/embed/playlist/3DIjw8eboATMgRN2RC6mz6?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -93,7 +103,7 @@ export default function Home() {
               <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
               <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><a target='__blank' href='https://github.com/codejesse'><Image height={35} width={35} src="./github.svg" /></a></div>
               <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://jessewrites.hashnode.dev/'><Image height={35} width={35} src="./hashnode.svg" /></a></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://www.linkedin.com/in/jesse-beke/'><Image className='mt-[-2px]' height={35} width={35} src="./linkedin.svg" /></a></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://www.linkedin.com/in/jesse-beke/'><Image className='mt-[-1px]' height={35} width={35} src="./linkedin.svg" /></a></div>
             </div>
           </div>
         </div>
