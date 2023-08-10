@@ -7,10 +7,47 @@ import { useState, Fragment, useEffect } from 'react'
 import { Transition, Dialog } from '@headlessui/react'
 import Drawer from './components/Drawer'
 import Loader from './components/Loader'
+import { motion } from "framer-motion";
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(true);
+
+  let text = "Creative ✨ Front-End Developer"
+
+  const words = text.split(" ")
+
+
+  // Variants for Container of words.
+  const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+    }),
+  };
+
+  // Variants for each word.
+  const child = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 20,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
 
   function closeModal() {
     setIsOpen(false)
@@ -27,7 +64,7 @@ export default function Home() {
   }, []);
 
   return isLoading ? (
-    <Loader /> ) : (
+    <Loader />) : (
     <main className="flex min-h-screen flex-col items-center justify-between p-2 lg:p-8">
       <div>
         <Nav />
@@ -97,7 +134,23 @@ export default function Home() {
             </svg>
           </span>
           <div className='flex flex-col gap-4 m-6 md:m-8 lg:m-14 pt-[30px] mt-[-20px] md:mt-[-20px] md:pt-[60px] lg:pt-[70px]'>
-            <h1 className='text-[55px] md:text-[80px] lg:text-[90px] leading-[70px] lg:leading-[90px]'><span className=''>Creative ✨</span> Front End Developer</h1>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              className="text-[55px] md:text-[80px] lg:text-[83px] flex flex-wrap mt-4 gap-none lg:leading-[100px] md:w-8/12 lg:w-[100%] font-medium"
+            >
+              {words.map((word, index) => (
+                <motion.div
+                  variants={child}
+                  key={index}
+                  className=""
+                >
+                  {word}
+                </motion.div>
+              ))}
+            </motion.div>
+            {/* <h1 className='text-[55px] md:text-[80px] lg:text-[90px] leading-[70px] lg:leading-[90px]'><span className=''>Creative ✨</span> Front End Developer</h1> */}
             <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i'm Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
             <div className='flex flex-row gap-10 h-[60px] w-full md:w-96 lg:w-96 rounded-full'>
               <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
