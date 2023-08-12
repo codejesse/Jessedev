@@ -155,10 +155,10 @@ export default function Home() {
             {/* <h1 className='text-[55px] md:text-[80px] lg:text-[90px] leading-[70px] lg:leading-[90px]'><span className=''>Creative ✨</span> Front End Developer</h1> */}
             <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i&apos;m Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
             <div className='flex flex-row gap-10 h-[60px] w-full md:w-96 lg:w-96 rounded-full'>
-              <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image height={35} width={35} src="./spotify.svg" /></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><a target='__blank' href='https://github.com/codejesse'><Image height={35} width={35} src="./github.svg" /></a></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://jessewrites.hashnode.dev/'><Image height={35} width={35} src="./hashnode.svg" /></a></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://www.linkedin.com/in/jesse-beke/'><Image className='mt-[-1px]' height={35} width={35} src="./linkedin.svg" /></a></div>
+              <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./spotify.svg" /></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><a target='__blank' href='https://github.com/codejesse'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./github.svg" /></a></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://jessewrites.hashnode.dev/'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./hashnode.svg" /></a></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://www.linkedin.com/in/jesse-beke/'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./linkedin.svg" /></a></div>
             </div>
           </div>
         </div>
