@@ -16,7 +16,7 @@ const Card = () => {
                     />
                 </div>
             </div>
-            <h1 className='font-normal text-[16px] mt-[20px]'>Project title</h1>
+            <h1 className='font-normal text-[16px] mt-[20px]'>Webminds</h1>
         </div>
     )
 }
