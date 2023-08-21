@@ -8,8 +8,8 @@ const Card = () => {
                 <span className='bg-white md:absolute hidden lg:absolute w-[50px] hover:w-[150px] hover:border-2 transition ease-in-out delay-150 h-[50px] rounded-full m-4 p-auto z-[999]'></span>
                 <div className='h-full flex items-center justify-center p-8 cursor-pointer hover:scale-110 transition ease-in-out delay-150'>
                     <Image
-                        src="/test.png"
-                        width={300}
+                        src="/webminds-dash.png"
+                        width={600}
                         height={400}
                         alt='test-png'
                         className='m-auto w-full justify-center cursor-pointer shadow-neutral-400'
