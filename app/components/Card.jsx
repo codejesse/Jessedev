@@ -11,7 +11,7 @@ const Card = () => {
                         src="/webminds-dash.png"
                         width={600}
                         height={400}
-                        alt='test-png'
+                        alt='product-png'
                         className='m-auto w-full justify-center cursor-pointer shadow-neutral-400'
                     />
                 </div>
