@@ -101,7 +101,7 @@ export default function Home() {
                       as="h3"
                       className="flex flex-row gap-7 my-auto p-2 lg:mx-24 text-3xl mt-[-10px] text-center font-display font-semibold text-gray-800"
                     >
-                      <Image height={35} width={35} src="./Spotify_icon.svg" /> Jesse&apos;s fav playlist
+                      <Image height={35} width={35} src="./Spotify_icon.svg" alt='icon' /> Jesse&apos;s fav playlist
                     </Dialog.Title>
                     <div className="mt-2">
                       <iframe className="rounded-[12px]" src="https://open.spotify.com/embed/playlist/3DIjw8eboATMgRN2RC6mz6?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -156,10 +156,10 @@ export default function Home() {
             {/* <h1 className='text-[55px] md:text-[80px] lg:text-[90px] leading-[70px] lg:leading-[90px]'><span className=''>Creative ✨</span> Front End Developer</h1> */}
             <p className='text-[16px] md:text-[20px] font-regular lg:text-[20px] w-[300px] md:w-[450px] lg:w-[500px] mb-4'>Hi i&apos;m Jesse Beke a Front End developer passionate about building simple to complex web experiences for clients globally.</p>
             <div className='flex flex-row gap-10 h-[60px] w-full md:w-96 lg:w-96 rounded-full'>
-              <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./spotify.svg" /></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><a target='__blank' href='https://github.com/codejesse'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./github.svg" /></a></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://jessewrites.hashnode.dev/'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./hashnode.svg" /></a></div>
-              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://www.linkedin.com/in/jesse-beke/'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./linkedin.svg" /></a></div>
+              <div onClick={openModal} className='w-fit p-3 cursor-pointer rounded-full  my-auto'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./spotify.svg" alt='icon' /></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full  my-auto'><a target='__blank' href='https://github.com/codejesse'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./github.svg" alt='icon' /></a></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://jessewrites.hashnode.dev/'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./hashnode.svg" alt='icon' /></a></div>
+              <div className='w-fit p-3 cursor-pointer rounded-full my-auto'><a target='__blank' href='https://www.linkedin.com/in/jesse-beke/'><Image className='w-[50px] md:w-[30px] lg:w-[35px]' height={35} width={35} src="./linkedin.svg" alt='icon' /></a></div>
             </div>
           </div>
         </div>
@@ -171,8 +171,8 @@ export default function Home() {
         </div>
         <div className='m-6 lg:m-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pt-8'>
           {project.map((data) => (
-            <div>
-              <Card title={data.title} img={data.img} />
+            <div key={data.id}>
+              <Card key={data.id} title={data.title} img={data.img} />
             </div>
           ))}
         </div>
