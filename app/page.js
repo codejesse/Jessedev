@@ -9,6 +9,7 @@ import Drawer from './components/Drawer'
 import Loader from './components/Loader'
 import { motion } from "framer-motion";
 import Message from './components/Message'
+import { project } from './assets/projects'
 
 export default function Home() {
   let [isOpen, setIsOpen] = useState(false)
@@ -169,10 +170,12 @@ export default function Home() {
           </div>
         </div>
         <div className='m-6 lg:m-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pt-8'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {project.map((data) => (
+            <div>
+              {/* <Image src={data.img} width={100} height={100} /> */}
+              <Card title={data.title} img={data.img} />
+            </div>
+          ))}
         </div>
         <div className='m-4 md:m-8 lg:m-14'>
           <div className='flex pt-[40px]'>
