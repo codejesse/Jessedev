@@ -172,7 +172,6 @@ export default function Home() {
         <div className='m-6 lg:m-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pt-8'>
           {project.map((data) => (
             <div>
-              {/* <Image src={data.img} width={100} height={100} /> */}
               <Card title={data.title} img={data.img} />
             </div>
           ))}
