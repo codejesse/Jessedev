@@ -12,7 +12,7 @@ const ProjectDetail = () => {
             <p className='text-[25px] font-medium'>Travel Smart & Safely</p>
             <p className='w-[80%] lg:w-[650px] mt-10'>Ziggo, the smart suitcase app that lets you control your luggage like a smart home! With Ziggo, you can easily lock and unlock your suitcase, check the battery level, and even receive notifications if your suitcase strays too far from you. </p>
             <div className='bg-[#efefef] mt-[70px] dark:none rounded-xl lg:rounded-3xl w-full h-[250px] md:h-[350px] lg:h-[650px] cursor-pointer overflow-hidden border border-[#d2d2d2]'>
-                <div className='h-full flex items-center justify-center p-14 cursor-pointer hover:scale-110 transition ease-in-out delay-150'>
+                <div className='h-full flex items-center justify-center p-8 lg:p-14 cursor-pointer hover:scale-110 transition ease-in-out delay-150'>
                     <Image
                         src={venda}
                         width={1500}
