@@ -9,11 +9,34 @@ import Drawer from './components/Drawer'
 import Loader from './components/Loader'
 import { motion } from "framer-motion";
 import Message from './components/Message'
-import { project } from './assets/projects'
+
+
+let url = 'http://localhost:3000/api/projects'
+
 
 export default function Home() {
+
   let [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState([])
+
+  
+  const fetchProjects = () => {
+    fetch(url)
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      setData(data)
+    })
+  }
+
+  useEffect(() => {
+    fetchProjects()
+  }, [])
+
+  console.log(data)
+
 
   let text = "Creative ✨ Front-End Developer"
 
@@ -170,11 +193,12 @@ export default function Home() {
           </div>
         </div>
         <div className='m-6 lg:m-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pt-8'>
-          {project.map((data) => (
-            <div key={data.id}>
-              <Card key={data.id} title={data.title} img={data.img} />
+          {data?.projects?.map((item) => (
+            <div key={item.id}>
+              <Card id={item.id} title={item.title} img={item.img} />
             </div>
           ))}
+          <h1 className='text-[30px] bg-white mx-auto px-4'>🦍 Working on a bug.....</h1>
         </div>
         <div className='m-4 md:m-8 lg:m-14'>
           <div className='flex pt-[40px]'>
@@ -186,6 +210,7 @@ export default function Home() {
           <Footer />
         </div>
       </div>
+      <button title="Contact Jesse" className="fixed z-90 bottom-10 right-8 bg-[#252525] w-[150px] h-[60px] rounded-full drop-shadow-lg flex flex-row justify-center items-center text-white text-xl hover:bg-[#6f32f1]hover:drop-shadow-xl duration-300">👋🏾 Say Hello</button>
     </main>
   )
 }
