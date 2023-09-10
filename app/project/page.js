@@ -2,7 +2,6 @@ import Nav from '../components/Nav'
 import Image from 'next/image'
 import venda from "../assets/Fleep.png"
 import Footer from '../components/Footer'
-import { project } from '../assets/projects'
 import {notFound} from "next/navigation"
 
 
