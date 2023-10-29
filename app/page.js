@@ -5,7 +5,6 @@ import Card from './components/Card'
 import Footer from './components/Footer'
 import { useState, Fragment, useEffect } from 'react'
 import { Transition, Dialog } from '@headlessui/react'
-import Drawer from './components/Drawer'
 import Loader from './components/Loader'
 import { motion } from "framer-motion";
 import Message from './components/Message'
@@ -15,7 +14,6 @@ let url = 'http://localhost:3000/api/projects'
 
 
 export default function Home() {
-
   let [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([])

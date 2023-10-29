@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { AcmeLogo } from './AcmeLogo';
 import { Spiral as Hamburger } from 'hamburger-react'
-import Drawer from './Drawer';
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,7 +51,7 @@ const Nav = () => {
                     </NavbarItem>
                 </NavbarContent>
                 <Hamburger size={25} toggled={isMenuOpen} toggle={setIsMenuOpen} />
-                <NavbarMenu>
+                {/* <NavbarMenu>
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
@@ -67,9 +66,17 @@ const Nav = () => {
                             </Link>
                         </NavbarMenuItem>
                     ))}
-                </NavbarMenu>
+                </NavbarMenu> */}
             </Navbar>
-            <Drawer />
+            {isMenuOpen ? (
+                <div className='flex h-[300px] mt-[55px] lg:ml-[-32px] pr-[20px] w-full bg-[#d8dcdc]/30 backdrop-blur-xl fixed'>
+                    <div className='m-auto text-center'>
+                        <h1 className='text-[45px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Work</h1>
+                        <h1 className='text-[45px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>About</h1>
+                        <h1 className='text-[45px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Contact</h1>
+                    </div>
+                </div>
+                ) : ""}
         </>
     )
 }
