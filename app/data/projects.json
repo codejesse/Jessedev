@@ -2,32 +2,35 @@
     "data": [
         {
             "id": 1,
+            "slug": "fleep",
             "title": "Fleep Marketplace",
             "desc": "This is a simple description",
             "img": "https://res.cloudinary.com/daiio9iqt/image/upload/v1694360634/projects/Fleep_xoesib.png",
             "type": "Real Estate Marketplace",
             "links": [
                 {
-                    "github": "",
-                    "link": ""
+                    "github": "https://github.com/codejesse/Fleep",
+                    "link": "https://fleep-two.vercel.app/"
                 }
             ]
         },
         {
             "id": 2,
             "title": "Venda landing",
+            "slug": "venda",
             "desc": "This is a simple description",
             "img": "https://res.cloudinary.com/daiio9iqt/image/upload/v1694360625/projects/Venda_jbxfui.png",
             "type": "Landing page",
             "links": [
                 {
                     "github": "",
-                    "link": ""
+                    "link": "https://vendasupply.com/"
                 }
             ]
         },
         {
             "id": 3,
+            "slug": "webminds",
             "title": "Webminds dashboard",
             "desc": "This is a simple description",
             "img": "https://res.cloudinary.com/daiio9iqt/image/upload/v1694360625/projects/webminds-dash_p5i6zs.png",
@@ -35,7 +38,7 @@
             "links": [
                 {
                     "github": "",
-                    "link": ""
+                    "link": "https://webmindsv2.vercel.app/"
                 }
             ]
         },

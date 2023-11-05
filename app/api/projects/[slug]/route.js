@@ -15,13 +15,13 @@ export async function GET(req, { params }) {
   try {
     const project = projects.data.find(item => item.slug === params.slug)
     if (!project) {
-      return new NextResponse('Not found', { status: 404 })
+      return new NextResponse('Not found ', { status: 404 })
     }
 
     return NextResponse.json({
       project,
     })
-    
+
   } catch (error) {
     return new NextResponse('Internal Server Error', { status: 500 })
   }

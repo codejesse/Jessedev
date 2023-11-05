@@ -69,11 +69,11 @@ const Nav = () => {
                 </NavbarMenu> */}
             </Navbar>
             {isMenuOpen ? (
-                <div className='flex h-[300px] mt-[55px] lg:ml-[-32px] pr-[20px] w-full bg-[#d8dcdc]/30 backdrop-blur-xl fixed'>
+                <div className='flex h-[300px] mt-[55.3px] lg:ml-[-32px] pr-[20px] w-full bg-[#d8dcdc]/30 backdrop-blur-xl fixed'>
                     <div className='m-auto text-center'>
-                        <h1 className='text-[45px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Work</h1>
-                        <h1 className='text-[45px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>About</h1>
-                        <h1 className='text-[45px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Contact</h1>
+                        <h1 className='lg:text-[45px] text-[25px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Work</h1>
+                        <h1 className='lg:text-[45px] text-[25px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>About</h1>
+                        <h1 className='lg:text-[45px] text-[25px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Contact</h1>
                     </div>
                 </div>
                 ) : ""}

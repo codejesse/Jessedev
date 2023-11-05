@@ -196,7 +196,7 @@ export default function Home() {
               <Card id={item.id} title={item.title} img={item.img} />
             </div>
           ))}
-          <h1 className='text-[30px] bg-white mx-auto px-4'>🦍 Working on a bug.....</h1>
+          {/* <h1 className='text-[30px] bg-white mx-auto px-4'>🦍 Working on a bug.....</h1> */}
         </div>
         <div className='m-4 md:m-8 lg:m-14'>
           <div className='flex pt-[40px]'>
