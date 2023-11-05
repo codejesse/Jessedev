@@ -193,7 +193,7 @@ export default function Home() {
         <div className='m-6 lg:m-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pt-8'>
           {data?.projects?.map((item) => (
             <div key={item.id}>
-              <Card id={item.id} title={item.title} img={item.img} />
+              <Card id={item.id} title={item.title} img={item.img} slug={item.slug} />
             </div>
           ))}
           {/* <h1 className='text-[30px] bg-white mx-auto px-4'>🦍 Working on a bug.....</h1> */}
