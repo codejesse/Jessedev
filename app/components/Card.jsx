@@ -20,7 +20,7 @@ const Card = ({ id, img, title, slug }) => {
             </div>
             <div className='flex flex-row'>
                 <h1 className='font-medium text-[20px] mt-[20px]'>{title}</h1>
-                <Link className='bg-white p-2 rounded-full h-[40px] w-[40px] -rotate-45' href={`/project/${slug}`}>&rarr;</Link>
+                <Link className='bg-white p-2 rounded-full h-[40px] w-[40px] -rotate-45' href={`/projects/${slug}`}>&rarr;</Link>
             </div>
         </div>
     )
