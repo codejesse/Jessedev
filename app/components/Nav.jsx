@@ -21,8 +21,10 @@ const Nav = () => {
             >
                 <NavbarContent>
                     <NavbarBrand className='cursor-pointer'>
-                        <AcmeLogo />
-                        <p className="font-bold text-[20px]">JESSE</p>
+                        <Link href="/">
+                            <AcmeLogo />
+                            <p className="font-bold text-[20px]">JESSE</p>
+                        </Link>
                     </NavbarBrand>
                 </NavbarContent>
 
@@ -74,7 +76,7 @@ const Nav = () => {
                         <h1 className='lg:text-[45px] text-[25px] mb-[15px] relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer'>Contact</h1>
                     </div>
                 </div>
-                ) : ""}
+            ) : ""}
         </>
     )
 }
