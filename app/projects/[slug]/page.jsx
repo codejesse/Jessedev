@@ -1,7 +1,7 @@
+'use client';
 import React from 'react'
 import Nav from '@/app/components/Nav'
 import Image from 'next/image'
-import venda from "../../assets/Fleep.png"
 import Footer from '@/app/components/Footer'
 import { getAllProjects, getProjectBySlug } from '@/libs/projects'
 
@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export default async function page({ params }) {
     const { project } = await getProjectBySlug(params.slug)
     console.log("hello there")
-    console.log(project.title)
+    console.log(project.desc)
   return (
     <div className='h-full p-2 lg:p-8'>
     <Nav />
