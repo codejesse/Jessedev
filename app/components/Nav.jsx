@@ -12,8 +12,6 @@ const Nav = () => {
         "Work",
         "Contact",
     ];
-
-    console.log(isMenuOpen)
     return (
         <>
             <Navbar
