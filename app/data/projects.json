@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "slug": "fleep",
+            "title": "Fleep Marketplace",
+            "desc": "Fleep is a free real estate marketplace website to buy, sell, or rent homes. It's a side project built with ReactJS and TailwindCSS, and released as an open-source template for free. With Fleep, you can browse thousands of listings, contact real estate agents, and make offers on properties.",
+            "img": "https://res.cloudinary.com/daiio9iqt/image/upload/v1694360634/projects/Fleep_xoesib.png",
+            "type": "Real Estate Marketplace",
+            "links": [
+                {
+                    "github": "https://github.com/codejesse/Fleep",
+                    "link": "https://fleep-two.vercel.app/"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Venda landing",
+            "slug": "venda",
+            "desc": "Venda, a Ghanaian hospitality logistics company, offers a one-stop shop for all hospitality needs. Venda specializes in transporting guests, food, and beverages to and from hotels, resorts, and other hospitality venues, as well as warehousing and fulfillment services for hospitality businesses. Venda is committed to providing its customers with the best possible service, competitive rates, and fast delivery times. For a free quote and to see how Venda can help with hospitality logistics needs, contact Venda today!",
+            "img": "https://res.cloudinary.com/daiio9iqt/image/upload/v1694360625/projects/Venda_jbxfui.png",
+            "type": "Landing page",
+            "links": [
+                {
+                    "github": "",
+                    "link": "https://vendasupply.com/"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "slug": "webminds",
+            "title": "Webminds dashboard",
+            "desc": "Webminds, a past questions viewing web application made for the Webminds hackathon, provides a convenient way for students of Rivers State University to access and browse past questions from a variety of sources. With Webminds, students can easily find and practice questions from specific topics and exams, and teachers can create and share custom collections of questions with their students. Webminds is a valuable resource for students and teachers alike, and it is helping to make education more accessible and effective.",
+            "img": "https://res.cloudinary.com/daiio9iqt/image/upload/v1694360625/projects/webminds-dash_p5i6zs.png",
+            "type": "Dashboard application",
+            "links": [
+                {
+                    "github": "",
+                    "link": "https://webmindsv2.vercel.app/"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Draft (in progress...⏳)",
+            "slug": "draft",
+            "desc": "Draft, a SaaS resume builder in the works, allows job seekers to use video and audio to pitch themselves to recruiters. It is a unique approach that helps job seekers stand out from the competition and make a lasting impression.",
+            "img": "https://res.cloudinary.com/daiio9iqt/image/upload/v1694360625/projects/Dashboard_bkzlmq.png",
+            "type": "Dashboard application",
+            "links": [
+                {
+                    "github": "",
+                    "link": ""
+                }
+            ]
+        }
+    ]
+  }
