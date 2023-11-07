@@ -18,20 +18,29 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([])
 
+  const fetchProjects = async () => {
+    const response = await fetch(url, { mode: "no-cors" });
+    const data = await response.json();
+    setData(data);
+  };
   
-  const fetchProjects = () => {
-    fetch(url, {mode: 'no-cors'})
-    .then(response => {
-      return response.json()
-    })
-    .then(data => {
-      setData(data)
-    })
-  }
-
   useEffect(() => {
-    fetchProjects()
-  }, [])
+    fetchProjects();
+  }, []);
+  
+  // const fetchProjects = () => {
+  //   fetch(url, {mode: 'no-cors'})
+  //   .then(response => {
+  //     return response.json()
+  //   })
+  //   .then(data => {
+  //     setData(data)
+  //   })
+  // }
+
+  // useEffect(() => {
+  //   fetchProjects()
+  // }, [])
 
   console.log(data)
 
