@@ -24,6 +24,7 @@ export default async function page({ params }) {
         <h1 className="text-[30px] md:text-[50px] lg:text-[83px] flex flex-wrap mt-4 gap-none lg:leading-[100px] w-[100%] md:w-[80%] lg:w-[100%] font-medium">{project.title}</h1>
         <p className='text-[25px] font-medium'>{project.type}</p>
         <p className='w-[80%] lg:w-[850px] mt-10'>{project.desc}</p>
+        <button className='border'>Visit</button>
         <div className='bg-[#efefef] mt-[70px] dark:none rounded-xl lg:rounded-3xl w-full h-[250px] md:h-[350px] lg:h-[650px] cursor-pointer overflow-hidden border border-[#d2d2d2]'>
             <div className='h-full flex items-center justify-center p-8 lg:p-14 cursor-pointer hover:scale-110 transition ease-in-out delay-150'>
                 <Image
