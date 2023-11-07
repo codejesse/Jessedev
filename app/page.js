@@ -20,7 +20,7 @@ export default function Home() {
 
   
   const fetchProjects = () => {
-    fetch(url)
+    fetch(url, {mode: 'cors'})
     .then(response => {
       return response.json()
     })
