@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export default async function page({ params }) {
   const { project } = await getProjectBySlug(params.slug)
   console.log("hello there")
-  console.log(project.desc)
+  console.log(project)
   return (
     <div className='h-full p-2 lg:p-8'>
       <Nav />
