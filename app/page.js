@@ -19,7 +19,13 @@ export default function Home() {
   const [data, setData] = useState([])
 
   const fetchProjects = async () => {
-  const response = await fetch(url, { mode: "no-cors" });
+  const response = await fetch(url, { 
+    mode: "no-cors",
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    } 
+  });
   const data = await response.json();
   setData(data);
 };
