@@ -19,22 +19,20 @@ export default function Home() {
   const [data, setData] = useState([])
 
   const fetchProjects = async () => {
-  const response = await fetch(url, { 
-    mode: "no-cors",
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      "Access-Control-Allow-Origin" : "*", 
-      "Access-Control-Allow-Credentials" : true 
-    } 
-  })
-  const data = await response.json()
-  setData(data);
-};
+    const response = await fetch(url, {
+      mode: "no-cors",
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+    const data = await response.json()
+    setData(data);
+  };
 
-useEffect(() => {
-  fetchProjects();
-}, []);
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
   console.log(data)
 
