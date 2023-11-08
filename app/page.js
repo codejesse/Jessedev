@@ -101,7 +101,7 @@ export default async function Home() {
           </div>
           <div className='flex flex-row justify-end mr-[60px] md:mr-[80px] lg:mr-[120px]'>
             <div className='flex flex-col'>
-              <p className='font-medium text-[20px] text-right lg:mt-[-60px]'>heyo@jesse.com</p>
+              <p className='font-medium text-[20px] text-right lg:mt-[-60px]'>heyo.jesse@gmail.com</p>
               <p className='font-light text-right text-[#505050]'>Scroll to explore</p>
             </div>
           </div>
