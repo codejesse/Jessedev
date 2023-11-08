@@ -23,7 +23,9 @@ export default function Home() {
     mode: "no-cors",
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      "Access-Control-Allow-Origin" : "*", 
+      "Access-Control-Allow-Credentials" : true 
     } 
   })
   const data = await response.json()
@@ -33,20 +35,6 @@ export default function Home() {
 useEffect(() => {
   fetchProjects();
 }, []);
-  
-  // const fetchProjects = () => {
-  //   fetch(url, {mode: 'no-cors'})
-  //   .then(response => {
-  //     return response.json()
-  //   })
-  //   .then(data => {
-  //     setData(data)
-  //   })
-  // }
-
-  // useEffect(() => {
-  //   fetchProjects()
-  // }, [])
 
   console.log(data)
 
