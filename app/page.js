@@ -25,8 +25,8 @@ export default function Home() {
     headers: {
       'Content-Type': 'application/json'
     } 
-  });
-  const data = await response.json();
+  })
+  const data = await response.json()
   setData(data);
 };
 
